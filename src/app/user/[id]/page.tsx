@@ -7,19 +7,19 @@ const enka = new EnkaClient({ cacheDirectory: "./cache", showFetchCacheLog: fals
 enka.cachedAssetsManager.cacheDirectorySetup();
 enka.cachedAssetsManager.fetchAllContents();
 
-// const characters = enka.getAllCharacters();
-
 const Player = async ({ params }: any) => {
-    // const renderCharaList = (): any => {
-    //     return characters.map((c: any, i) => {
-    //         return <p key={i}>{c.name.get()}</p>
-    //     })
-    // }
+    const characters = enka.getAllCharacters();
+    
+    const renderCharaList = (): any => {
+        return characters.map((c: any, i) => {
+            return <p key={i}>{c.name.get()}</p>
+        })
+    }
 
     return (
         <div>
             <div>{params.id}</div>
-            {/* {renderCharaList()} */}
+            {renderCharaList()}
         </div>
     )
 }
