@@ -2,6 +2,14 @@ import Furina from '@/components/furina'
 import SearchBtn from '@/components/searchBtn'
 import Link from 'next/link'
 
+import { EnkaClient } from 'enka-network-api';
+
+// Change the directory to store cache data.
+// Default directory is node_modules/enka-network-api/cache.
+const enka = new EnkaClient({ cacheDirectory: "./cache", showFetchCacheLog: false, defaultLanguage: "en" });
+enka.cachedAssetsManager.cacheDirectorySetup();
+enka.cachedAssetsManager.fetchAllContents();
+
 export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -17,7 +25,7 @@ export default function Home() {
                 <Link 
                     href='/user/600169846'
                 >
-                    User
+                    User: Speedy
                 </Link>
                 <SearchBtn />
             </div>
