@@ -6,9 +6,11 @@ import { EnkaClient } from 'enka-network-api';
 
 // Change the directory to store cache data.
 // Default directory is node_modules/enka-network-api/cache.
-const enka = new EnkaClient({ cacheDirectory: "./cache", showFetchCacheLog: false, defaultLanguage: "en" });
-enka.cachedAssetsManager.cacheDirectorySetup();
-enka.cachedAssetsManager.fetchAllContents();
+
+// vvv Uncommenting these lines produces a JSON error, since the fetch will continue running while users move to other pages. vvv
+// const enka = new EnkaClient({ cacheDirectory: "./cache", showFetchCacheLog: false, defaultLanguage: "en" });
+// enka.cachedAssetsManager.cacheDirectorySetup();
+// enka.cachedAssetsManager.fetchAllContents();
 
 export default function Home() {
     return (
