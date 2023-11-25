@@ -10,17 +10,13 @@ const Player = async ({ params }: any) => {
     enka.cachedAssetsManager.fetchAllContents();
     
     const renderCharaList = (): any => {
-        // try {
-        //     return enka.fetchUser(params.id).then ((user: any) => {
-        //         return <p>{user.characters[0].characterData.name.get()}</p>
-        //     })
-        // } catch (error) {
-        //     console.log(error);
-        // }
-
-        return enka.fetchUser(params.id).then ((user: any) => {
-            return <p>{user.characters[0].characterData.name.get()}</p>
-        })
+        try {
+            return enka.fetchUser(params.id).then ((user: any) => {
+                return <p>{user.characters[0].characterData.name.get()}</p>
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
