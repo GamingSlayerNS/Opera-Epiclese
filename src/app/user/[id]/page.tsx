@@ -1,5 +1,6 @@
 import React from 'react'
 import { EnkaClient } from 'enka-network-api';
+import Link from 'next/link';
 
 const Player = async ({ params }: any) => {
     // Change the directory to store cache data.
@@ -25,7 +26,11 @@ const Player = async ({ params }: any) => {
     return (
         <div>
             <div>{params.id}</div>
+            {/* {enka.fetchUser(params.id).then((user: any) => {
+                return <h1 className='text-5xl text-center'>{user.nickname}</h1>
+            })} */}
             {renderCharaList()}
+            <Link href='/'>Homepage</Link>
         </div>
     )
 }
