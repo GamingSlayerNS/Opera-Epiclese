@@ -1,8 +1,19 @@
 import React from 'react'
+import { SimpleGrid } from '@mantine/core';
 
 const User = () => {
     return (
-        <div>User</div>
+        <SimpleGrid cols={3}>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+            <div>User</div>
+        </SimpleGrid>
     )
 }
 
