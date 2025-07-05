@@ -25,7 +25,7 @@ export default async function Profile({
 
     return (
         <div className="p-4">
-            <h1 className="text-2xl font-bold mb-2">User Profile: {playerData.player.username}</h1>
+            <h1 className="text-blue-600 text-2xl font-bold mb-2">User Profile: {playerData.player.username}</h1>
             <p>World Level: {playerData.player.levels?.world}</p>
             <p>Adventure Rank: {playerData.player.levels?.rank}</p>
             <p>Signature: {playerData.player.signature}</p>
